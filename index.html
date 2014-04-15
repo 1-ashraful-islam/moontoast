@@ -51,20 +51,20 @@
   <!-- Put your theme's HTML inside this script tag. The script tag will 
        prevent issues with quote escaping and invalid markup. -->
   <script id="theme" type="text/x-handlebars-template">
-    <div id="cool-header">
-        <div id="cool-header-responsive-problem-solving-div">
-            <div id="cool-header-inner">
-                {{logo max_width=248 max_height=48}}
-                {{pop_links}}
-            </div>
-        </div>
-     </div>
+  <div id="cool-header">
+      <div id="cool-header-responsive-problem-solving-div">
+          <div id="cool-header-inner">
+              <div id="top-logo"></div>
+              {{pop_links}}
+          </div>
+      </div>
+  </div>
     <div id="background">
       <div id="my-pop-title">{{{title}}}</div>
     </div>
     
-    {{#region "columnizer" id="top-region" max_cols="4" max_auto_assets="0" dummy_content="T-1|T-1,T-1|T-1,T-1,T-1|T-1,T-1,T-1,T-1|I-1|I-2|I-1,I-2|I-1,I-2,I-3|I-1,I-2,I-3,I-4|D-1|D-3|D-1,D-3|D-1,D-2,D-3|D-1,D-2,D-3,D-4|E-1|E-2|E-1,E-2|E-1,E-2,E-3|E-1,E-2,E-3,E-4"}}
-    
+    {{#region "columnizer" id="top-region" max_cols="4" max_auto_assets="0" dummy_content="T-1"}}
+  <!--dummy_content="T-1|T-1,T-1|T-1,T-1,T-1|T-1,T-1,T-1,T-1|I-1|I-2|I-1,I-2|I-1,I-2,I-3|I-1,I-2,I-3,I-4|D-1|D-3|D-1,D-3|D-1,D-2,D-3|D-1,D-2,D-3,D-4|E-1|E-2|E-1,E-2|E-1,E-2,E-3|E-1,E-2,E-3,E-4"-->
       {{#asset "text" size="1"}}
         {{{title}}}
         {{{body}}}
@@ -223,8 +223,8 @@
 
     {{/region}}
     
-    {{#region "columnizer" id="bottom-region" max_cols="4" max_auto_assets="0" dummy_content="T-1|T-1,T-1|T-1,T-1,T-1|T-1,T-1,T-1,T-1|I-1|I-2|I-1,I-2|I-1,I-2,I-3|I-1,I-2,I-3,I-4|D-1|D-3|D-1,D-3|D-1,D-2,D-3|D-1,D-2,D-3,D-4|E-1|E-2|E-1,E-2|E-1,E-2,E-3|E-1,E-2,E-3,E-4"}}
-    
+    {{#region "columnizer" id="bottom-region" max_cols="4" max_auto_assets="0" dummy_content="T-1"}}
+  <!--dummy_content="T-1|T-1,T-1|T-1,T-1,T-1|T-1,T-1,T-1,T-1|I-1|I-2|I-1,I-2|I-1,I-2,I-3|I-1,I-2,I-3,I-4|D-1|D-3|D-1,D-3|D-1,D-2,D-3|D-1,D-2,D-3,D-4|E-1|E-2|E-1,E-2|E-1,E-2,E-3|E-1,E-2,E-3,E-4"-->
       {{#asset "text" size="1"}}
         {{{title}}}
         {{{body}}}
@@ -383,6 +383,30 @@
       {{/asset}}
 
     {{/region}}
+  <div id="branding-footer">
+      <div id="footer-ornament"></div>
+      <div id="footer-container">
+      <div id="footer-meta">
+          <div id="bottom-logo"></div>
+          <p class="copy">&copy; 2014 Moontoast, Inc. All rights reserved.</p>
+          <a href="http://www.moontoast.com/legal/terms-of-service/" title="Terms of Service">Terms of Service</a> | <a href="http://www.moontoast.com/legal/privacypolicy/" title="Privacy Policy">Privacy Policy</a>
+      </div>
+
+      <ul id="locations">
+          <li><strong>Boston<br></strong>
+              4 South Market Place<br>
+              4th Floor - Suite 5005<br>
+              Boston MA 02109</li>
+          <li><strong>Nashville<br></strong>
+              631 2nd Ave S<br>
+              Nashville TN 37210</li>
+          <li><strong>San Francisco<br></strong>
+              760 Market St<br>
+              5th Floor<br>
+              San Francisco CA 94102</li>
+      </ul>
+      </div>
+  </div>
 
   </script>
 </body>
