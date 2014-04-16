@@ -475,6 +475,24 @@ h2, h3, h4, h5 { text-shadow: 0 1px 1px rgba(0,0,0,0.4); }
       border-bottom: 1px solid #9b9796;
     }
   }
+  .columnizer-row-contents-text:first-child
+  {
+    font-size: 22px;
+    line-height: 40px;
+    .columnizer-row-inner {
+      border-bottom: none;
+    }
+    .asset-type-text {
+      padding-left: 150px;
+      padding-right: 150px;
+    }
+  #moon_bug {
+    height: 45px;
+    width: 46px;
+    margin: 20px auto 0;
+    background: url("@{base-url}/images/moontoast-bug.png");
+  }
+  }
 
 }
 .left {
@@ -626,6 +644,15 @@ h2, h3, h4, h5 { text-shadow: 0 1px 1px rgba(0,0,0,0.4); }
 }
 
 @media screen and (max-width: 900px) {
+  #top-region {
+    .columnizer-row-contents-text:first-child
+    {
+      .asset-type-text {
+        padding-left: 0px;
+        padding-right: 0px;
+      }
+  }
+  }
   .left {
     width: auto;
     float: none;
