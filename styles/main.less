@@ -12,7 +12,7 @@
 @import 'variables';
 @import 'http://populr.me/assets/developers/populr_mixins.less';
 @import 'preboot';
-@import '//fonts.googleapis.com/css?family=Arimo:400,700,400italic,700italic';
+
 
 
 // Call preboot.less's reset to reduce browser inconsistencies
@@ -34,8 +34,8 @@
 }
 .pop-title-text() {
   font-family: @headline-font-family;
-  font-size: 24px;
-  line-height: 1.1;
+  font-size: 36px;
+  line-height: 1.2;
 }
 
 // Body text defaults
@@ -151,18 +151,17 @@
 }
 #pop-title {
     font-family: @headline-font-family;
-    background: #FBFAF9;
-    width: 960px;
+    max-width: 960px;
+    width: auto;
     margin: 0 auto;
     padding: 0!important;
-    font-size:	24px;
+    font-size:	36px;
     color:	#fff;
-    letter-spacing:	-3px;
-    line-height:	1.45;
+    line-height:	1.2;
     #populr > .text-color-over-color(@background-color);
     position: relative;
-    text-shadow: 2px 3px 1px rgba(0,0,0,.3);
-    filter: progid:DXImageTransform.Microsoft.DropShadow(offX=2,offY=3,color=000000);
+//    text-shadow: 2px 3px 1px rgba(0,0,0,.3);
+//    filter: progid:DXImageTransform.Microsoft.DropShadow(offX=2,offY=3,color=000000);
 }
 body {
     background-size: 100% 50% !important;
@@ -373,6 +372,9 @@ h2, h3, h4, h5 { text-shadow: 0 1px 1px rgba(0,0,0,0.4); }
   .asset-title {
     .headline-text();
     color:#232323;
+    strong {
+      color: #232323;
+    }
   }
   .description, .body, .description li, .body li, {
     .body-text();
@@ -466,6 +468,21 @@ h2, h3, h4, h5 { text-shadow: 0 1px 1px rgba(0,0,0,0.4); }
 }
 
 //code added to match the moontoast
+
+#top-region {
+  .columnizer-cols1 {
+    .columnizer-row-inner {
+      border-bottom: 1px solid #9b9796;
+    }
+  }
+
+}
+.left {
+  width: 300px;
+  border:1px solid #ccc;
+  float: left;
+  margin: 0 30px 25px 0;
+}
 #bottom-region {
   .asset-type-text {
     .body {
@@ -579,6 +596,7 @@ h2, h3, h4, h5 { text-shadow: 0 1px 1px rgba(0,0,0,0.4); }
     width: auto;
     padding-right: 10px;
   }
+
   #top-logo {
     margin-left: 10px;
   }
@@ -608,6 +626,11 @@ h2, h3, h4, h5 { text-shadow: 0 1px 1px rgba(0,0,0,0.4); }
 }
 
 @media screen and (max-width: 900px) {
+  .left {
+    width: auto;
+    float: none;
+    margin: 0;
+  }
 
   .columnizer-col { margin-left: 0 !important; margin-right: 0 !important; }
   .embed { height: auto !important; }
