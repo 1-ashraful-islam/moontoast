@@ -6,8 +6,6 @@
 
 // You must import variables.less before importing populr_mixins.less
 //@import 'palette-custom';
-//@import 'palette-Lavendar';
-//@import 'palette-Apricot';
 @import 'palette-default';
 @import 'variables';
 @import 'http://populr.me/assets/developers/populr_mixins.less';
@@ -127,18 +125,6 @@
 #background {
   height: 460px;
   width: 100%;
-  h1 {
-    border: 2px solid #FFFFFF;
-    color: #FFFFFF;
-    font-family: 'Arimo',sans-serif;
-    font-size: 36px;
-    font-weight: bold;
-    margin: 0 auto;
-    padding: 12px 28px;
-    text-transform: uppercase;
-    top: 230px;
-    width: 270px
-  }
 }
 
 // Pop title
@@ -273,6 +259,9 @@ h2, h3, h4, h5 { text-shadow: 0 1px 1px rgba(0,0,0,0.4); }
     text-transform: capitalize;
     max-width:227px;
 }
+@color1 : lighten(@custom-or-default-color , 20%);
+@color2 : @custom-or-default-color;
+
 
 .link-btn {
   font-size: 16px;
@@ -283,13 +272,13 @@ h2, h3, h4, h5 { text-shadow: 0 1px 1px rgba(0,0,0,0.4); }
   border-radius: 6px !important;
   border: none;
   transition: all 0.3s linear 0s !important;
-  background: -moz-linear-gradient(top, #eb7665 40%, #ea452d 60%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #eb7665), color-stop(60%, #ea452d));
-  background: -webkit-linear-gradient(top, #eb7665 40%, #ea452d 60%);
-  background: -o-linear-gradient(top, #eb7665 40%, #ea452d 60%);
-  background: -ms-linear-gradient(top, #eb7665 40%, #ea452d 60%);
-  background: linear-gradient(to bottom, #eb7665 40%, #ea452d 60%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eb7665', endColorstr='#ea452d', GradientType=0);
+  background: -moz-linear-gradient(top, @color1 40%, @color2 60%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, @color1), color-stop(60%, @color2));
+  background: -webkit-linear-gradient(top, @color1 40%, @color2 60%);
+  background: -o-linear-gradient(top, @color1 40%, @color2 60%);
+  background: -ms-linear-gradient(top, @color1 40%, @color2 60%);
+  background: linear-gradient(to bottom, @color1 40%, @color2 60%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@color1', endColorstr='@color2', GradientType=0);
   box-shadow: 0px 5px 10px rgba(0,0,0,0.5) !important;
   &:hover {
     background: darken(@link-color, 20%) !important;
@@ -465,6 +454,18 @@ h2, h3, h4, h5 { text-shadow: 0 1px 1px rgba(0,0,0,0.4); }
 // IE Styles
 .lt-ie8 {
     button { padding: 8px 5px !important; }
+}
+.lt-ie9 {
+  .slide { width: 100%;}
+}
+.lt-ie8 {
+  .fullbg-container {
+    img {
+      display: block !important;
+      width: 100% !important;
+      
+    }
+  }
 }
 
 //code added to match the moontoast
